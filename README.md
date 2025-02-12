@@ -4,3 +4,4 @@ Here are the settings for two applications that I use on my Windows machine, whi
 - [YASB](https://github.com/amnweb/yasb?tab=readme-ov-file)
 - [Komorebi](https://lgug2z.github.io/komorebi/index.html)
 
+![image alt](https://github.com/RennerFarias/Dotfiles/blob/34e1897a54d85a6766643417e084176e4112fbf6/what%20it%20looks%20like/1.png)
