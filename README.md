@@ -2,12 +2,12 @@
 
 Repositório com minhas configurações, temas e personalizações do Windows, incluindo ajustes visuais, terminal customizado e configs de programas que uso no dia a dia para deixar o sistema mais limpo, minimalista e funcional.
 
-![1](What%20it%20looks%20like/1P)
+![1](What%20it%20looks%20like/1P.png)
 
-![2](What%20it%20looks%20like/2P)
+![4](What%20it%20looks%20like/4P.png)
 
-![3](What%20it%20looks%20like/3P)
+![3](What%20it%20looks%20like/3P.png)
 
-![4](What%20it%20looks%20like/4P)
+![5](What%20it%20looks%20like/5P.png)
 
-![5](What%20it%20looks%20like/5P)
+![2](What%20it%20looks%20like/2P.png)
