@@ -1,11 +1,4 @@
-# Dotfiles
-Here are the settings for two applications that I use on my Windows machine, which I like because they give it a look similar to that of a Linux distribution with a window manager. The programs used were YASB and Komorebi
+# ✨ Dotfiles
 
-- [YASB](https://github.com/amnweb/yasb?tab=readme-ov-file)
-- [Komorebi](https://lgug2z.github.io/komorebi/index.html)
+Repositório com minhas configurações, temas e personalizações do Windows, incluindo ajustes visuais, terminal customizado e configs de programas que uso no dia a dia para deixar o sistema mais limpo, minimalista e funcional.
 
-Below, I have provided three photos to show you how it looks.
-
-![image alt](https://github.com/RennerFarias/Dotfiles/blob/34e1897a54d85a6766643417e084176e4112fbf6/what%20it%20looks%20like/1.png)
-![image alt](https://github.com/RennerFarias/Dotfiles/blob/10db6ac106bbd08125a2e6950571ba1126b9410b/what%20it%20looks%20like/2.png)
-![image alt](https://github.com/RennerFarias/Dotfiles/blob/10db6ac106bbd08125a2e6950571ba1126b9410b/what%20it%20looks%20like/3.png)

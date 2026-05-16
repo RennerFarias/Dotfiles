@@ -1,0 +1,75 @@
+Para que possamos deixar seu terminal bonito e com informações sobre o seu computador, a primeira coisa que você deve fazer é baixar o pacote de fontes JetBrains Mono Nerd Font. Vou deixar o link aqui embaixo:
+
+https://www.jetbrains.com/lp/mono/
+
+Com isso podemos prosseguir. Você não vai querer deixar o computador bonito com letras feias, certo?
+
+================================================
+                     1º PASSO
+================================================
+
+Abra meu repositório (Dotfiles), procure pela pasta "terminal" e copie o código que está dentro dela.
+
+Depois disso, abra seu terminal, vá em Configurações e procure pela opção "Abrir arquivo JSON". Apague tudo que estava antes e cole a nova configuração que acabamos de copiar. Salve o arquivo.
+
+Quando você abrir o terminal novamente, já vai perceber que ele está com cores novas e uma fonte diferente.
+
+================================================
+                     2º PASSO
+================================================
+
+Agora vamos verificar onde está o seu perfil do PowerShell. Abra o terminal e digite:
+
+    $PROFILE
+
+Se não aparecer nada, não entre em pânico. Volte ao terminal e copie e cole esse comando abaixo para criar um novo perfil do PowerShell:
+
+    New-Item -Path $profile.CurrentUserAllHosts -Type File -Force
+
+Depois de executar esse comando, seu perfil estará criado. Então quando você for na pasta Documentos do Windows, verá uma pasta chamada WindowsPowerShell.
+
+================================================
+                     3º PASSO
+================================================
+
+Agora que já deixamos seu terminal mais arrumado e você tem um perfil no PowerShell, vamos começar o processo para exibir as informações do seu computador ao abrir o terminal!
+
+================================================
+                     4º PASSO
+================================================
+
+Vamos instalar o Fastfetch, que é o responsável por exibir as informações do sistema de forma atraente no terminal.
+
+Digite esse comando no terminal para instalar o Fastfetch:
+
+    winget install fastfetch
+
+Depois disso, volte ao meu repositório e vá até a pasta "Fastfetch". Lá você encontrará dois arquivos necessários para continuar o processo. Baixe os dois antes de prosseguir.
+
+Depois de baixar, vá até:
+
+    Meu Computador > Usuários > SEUNOME
+
+Crie uma pasta chamada ".config" caso ela ainda não exista. Depois clique com o botão direito nela, vá em "Mostrar mais opções" e depois em "Propriedades". Marque a caixa chamada "Oculto" ou "Hidden".
+
+Em seguida, abra o Explorador de Arquivos, clique em "Visualizar" na parte superior e marque a opção "Itens ocultos".
+
+Dentro da pasta .config, crie outra pasta chamada "fastfetch" e coloque nela os dois arquivos que você baixou (ascii e config).
+
+Para finalizar, abra o arquivo "config" e altere esta linha colocando o nome do seu usuário do Windows:
+
+    "source": "C:/Users/SEUNOME/.config/fastfetch/ascii.txt",
+
+Depois de alterar, salve o arquivo.
+
+Agora volte para a pasta Documentos do Windows e abra a pasta WindowsPowerShell. Você verá que já existe um arquivo chamado "profile". Delete esse arquivo e volte ao meu repositório, onde haverá uma pasta com o mesmo nome (WindowsPowerShell) contendo um perfil pronto para você baixar e colocar na pasta Documentos do Windows.
+
+Lembre-se de, ao colocar o arquivo novo, modificar essa linha com o seu nome de usuário do Windows:
+
+    fastfetch -c "C:/Users/SEUNOME/.config/fastfetch/config.jsonc"
+
+Pronto! Seu terminal já está com um visual bem mais agradável e você pode personalizá-lo da forma que quiser com um único arquivo de configuração.
+
+Se houver dúvidas, consulte o repositório oficial do Fastfetch:
+
+https://github.com/fastfetch-cli/fastfetch
