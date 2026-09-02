@@ -28,14 +28,11 @@ Se não aparecer nada, não entre em pânico. Volte ao terminal e copie e cole e
 
 Depois de executar esse comando, seu perfil estará criado. Então quando você for na pasta Documentos do Windows, verá uma pasta chamada WindowsPowerShell.
 
-================================================
-                     3º PASSO
-================================================
 
 Agora que já deixamos seu terminal mais arrumado e você tem um perfil no PowerShell, vamos começar o processo para exibir as informações do seu computador ao abrir o terminal!
 
 ================================================
-                     4º PASSO
+                     3º PASSO
 ================================================
 
 Vamos instalar o Fastfetch, que é o responsável por exibir as informações do sistema de forma atraente no terminal.

@@ -1,0 +1,2 @@
+Testando um launcher diferente chamado mydockfinder, ele permite deixar o visual do windows com aparencia do mac e não consome tanto da maquina
+caso queiram instalar, link a seguir https://store.steampowered.com/app/1787090/MyDockFinder/
