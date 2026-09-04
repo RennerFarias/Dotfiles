@@ -1,0 +1,200 @@
+/**
+ * @name Noite estrelada
+ * @author Renner
+ * @description Tema espacial com estrelas
+ * @version 1.0.0
+ */
+
+:root {
+  --space-void:        #05060f;
+  --space-deep:        #0a0e1f;
+  --space-nebula:      #131a33;
+  --space-nebula-alt:  #1b2447;
+  --space-accent:      #7f5af0;
+  --space-accent-2:    #935cd3;
+  --space-star:        #f4f7ff;
+  --space-star-dim:    #9aa4c7;
+
+  --background-primary:           var(--space-deep);
+  --background-secondary:         var(--space-void);
+  --background-secondary-alt:     var(--space-nebula);
+  --background-tertiary:          var(--space-void);
+  --background-accent:            var(--space-accent);
+  --background-floating:          var(--space-nebula-alt);
+  --background-mobile-primary:    var(--space-deep);
+  --background-modifier-hover:    rgba(127, 90, 240, 0.12);
+  --background-modifier-active:   rgba(127, 90, 240, 0.20);
+  --background-modifier-selected: rgba(127, 90, 240, 0.28);
+
+  --text-normal:      var(--space-star);
+  --text-muted:        var(--space-star-dim);
+  --text-link:         var(--space-accent-2);
+  --header-primary:    #ffffff;
+  --header-secondary:  var(--space-star-dim);
+
+  --interactive-normal: var(--space-star-dim);
+  --interactive-hover:  var(--space-star);
+  --interactive-active: var(--space-accent-2);
+  --interactive-muted:  #4b5375;
+
+  --channeltextarea-background: var(--space-nebula);
+  --scrollbar-thin-thumb: var(--space-nebula-alt);
+  --scrollbar-auto-thumb: var(--space-nebula-alt);
+  --scrollbar-auto-track: transparent;
+}
+
+html, body {
+  background-color: #000000 !important;
+}
+
+html::before,
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 110px;
+  background-image:
+    radial-gradient(circle 2px at 50% 4px, var(--space-star), transparent 65%),
+    linear-gradient(180deg, rgba(244, 247, 255, 0.9) 0%, transparent 75%);
+  z-index: 999998;
+  pointer-events: none;
+  opacity: 0;
+}
+
+html::before {
+  top: -10%;
+  left: 15%;
+  transform: rotate(135deg);
+  animation: star-shoot-1 9s linear infinite;
+}
+
+html::after {
+  top: -10%;
+  left: 75%;
+  height: 85px;
+  transform: rotate(225deg);
+  animation: star-shoot-2 14s linear infinite;
+  animation-delay: 4s;
+}
+
+@keyframes star-shoot-1 {
+  0%   { transform: translate3d(0, 0, 0) rotate(135deg); opacity: 0; }
+  1%   { opacity: 1; }
+  8%   { transform: translate3d(60vw, 60vh, 0) rotate(135deg); opacity: 0; }
+  100% { transform: translate3d(60vw, 60vh, 0) rotate(135deg); opacity: 0; }
+}
+@keyframes star-shoot-2 {
+  0%   { transform: translate3d(0, 0, 0) rotate(225deg); opacity: 0; }
+  1%   { opacity: 1; }
+  7%   { transform: translate3d(-60vw, 60vh, 0) rotate(225deg); opacity: 0; }
+  100% { transform: translate3d(-60vw, 60vh, 0) rotate(225deg); opacity: 0; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -890px 0 0 0;
+  z-index: 999999;
+  pointer-events: none;
+  will-change: transform;
+  mix-blend-mode: screen;
+  filter: blur(0.4px);
+  background-color: transparent;
+  background-repeat: repeat;
+  background-size: 210px 890px;
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px, var(--space-star-dim), transparent),
+    radial-gradient(1.5px 1.5px at 70px 210px, var(--space-star), transparent),
+    radial-gradient(1.5px 1.5px at 120px 390px, var(--space-star-dim), transparent),
+    radial-gradient(2px 2px at 150px 470px, var(--space-star), transparent),
+    radial-gradient(1.5px 1.5px at 40px 610px, var(--space-star-dim), transparent),
+    radial-gradient(1.5px 1.5px at 170px 740px, var(--space-star), transparent),
+    radial-gradient(1.5px 1.5px at 95px 820px, var(--space-star-dim), transparent);
+  animation: star-fall-fast 17s linear infinite;
+  opacity: 0.9;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -1240px 0 0 0;
+  z-index: 999999;
+  pointer-events: none;
+  will-change: transform;
+  mix-blend-mode: screen;
+  filter: blur(0.5px);
+  background-color: transparent;
+  background-repeat: repeat;
+  background-size: 340px 1240px;
+  background-image:
+    radial-gradient(2.5px 2.5px at 30px 50px, var(--space-star), transparent),
+    radial-gradient(3px 3px at 110px 310px, var(--space-accent-2), transparent),
+    radial-gradient(2.5px 2.5px at 200px 560px, var(--space-star), transparent),
+    radial-gradient(3.5px 3.5px at 240px 830px, var(--space-accent), transparent),
+    radial-gradient(2.5px 2.5px at 60px 1040px, var(--space-star), transparent),
+    radial-gradient(3px 3px at 300px 1150px, var(--space-accent-2), transparent);
+  animation: star-fall-slow 29s linear infinite;
+  opacity: 1;
+}
+
+@keyframes star-fall-fast {
+  0%   { transform: translate3d(0px, 0px, 0); }
+  30%  { transform: translate3d(18px, 267px, 0); }
+  60%  { transform: translate3d(-10px, 534px, 0); }
+  100% { transform: translate3d(0px, 890px, 0); }
+}
+@keyframes star-fall-slow {
+  0%   { transform: translate3d(0px, 0px, 0); }
+  35%  { transform: translate3d(-22px, 434px, 0); }
+  70%  { transform: translate3d(14px, 868px, 0); }
+  100% { transform: translate3d(0px, 1240px, 0); }
+}
+
+[class*="sidebar-"],
+[class*="chat-"],
+[class*="channel-"],
+[class*="guilds-"],
+[class*="members-"] {
+  background-color: transparent !important;
+}
+
+[class*="container-"][class*="panel"],
+[class*="modal-"] {
+  background-color: var(--space-nebula) !important;
+  border: 1px solid rgba(127, 90, 240, 0.25) !important;
+  box-shadow: 0 0 24px rgba(127, 90, 240, 0.15) !important;
+}
+
+[class*="button-"][class*="primary"],
+button[class*="filled"] {
+  background: linear-gradient(135deg, var(--space-accent), var(--space-accent-2)) !important;
+  border: none !important;
+  box-shadow: 0 0 12px rgba(127, 90, 240, 0.5);
+}
+
+a, [class*="anchor-"] {
+  color: var(--space-accent-2) !important;
+}
+
+[class*="guildIcon-"], [class*="wrapper-"][class*="guild"] {
+  transition: box-shadow 0.25s ease, transform 0.15s ease;
+}
+[class*="guildIcon-"]:hover {
+  box-shadow: 0 0 14px var(--space-accent-2);
+  transform: translateY(-1px);
+}
+
+[class*="pill-"], [class*="unread-"] {
+  background: var(--space-accent-2) !important;
+  box-shadow: 0 0 6px var(--space-accent-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--space-nebula-alt) !important;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
